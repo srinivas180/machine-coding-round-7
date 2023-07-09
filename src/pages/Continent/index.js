@@ -74,6 +74,22 @@ export function Continent() {
             ) : (
                 ""
             )}
+
+            {destination != undefined && destination !== null ? (
+                <div className="container">
+                    <img src={destination.image} style={{ width: "300px" }} />
+                    <h1>{destination.name}</h1>
+                    <div>{destination.description}</div>
+                    <div>Ratings: {destination.ratings}</div>
+
+                    <div>Review: {destination.reviews}</div>
+                    <a href={destination.website} target="_blank">
+                        Website
+                    </a>
+                </div>
+            ) : (
+                ""
+            )}
         </div>
     );
 }
